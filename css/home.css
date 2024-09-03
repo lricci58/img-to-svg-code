@@ -1,13 +1,22 @@
 :root {
     --min-padding: 0.5em;
     --preferred-width: calc(95vw - (var(--min-padding) * 2));
+
+    --border-radius: 8px;
 }
 
 main,
 footer {
     margin: auto;
     width: min(100%, 900px);
-    padding: calc(var(--min-padding) * 2) var(--min-padding);
+}
+
+main {
+    padding: calc(var(--min-padding) * 2) var(--min-padding) calc(var(--min-padding) * 6) var(--min-padding);
+}
+
+footer {
+    padding: calc(var(--min-padding) * 3) var(--min-padding);
 }
 
 main {
@@ -19,10 +28,6 @@ main {
 /* header {}
 
 section {} */
-
-footer {
-    margin: auto;
-}
 
 h1 {
     margin: 0.5em 0;
@@ -50,30 +55,41 @@ ul {
 .upload-image-button {
     display: block;
     margin: auto;
-    width: min(100%, 400px);
+    width: clamp(300px, 95vw, 434px);
     border-radius: 2em;
     background-color: var(--tertiary-clr);
-    box-shadow: 10px 10px 15px 2px #8b8686, 8px 6px 15px -10px #a1a1a1 inset;
     outline: none;
+
+    box-shadow: 10px 10px 15px 2px #8b8686, 8px 6px 15px -10px #a1a1a1 inset;
+    transition: box-shadow 0.15s ease-out;
+}
+
+.upload-image-button:hover {
+    box-shadow: 10px 10px 15px 5px #8b8686, 8px 6px 15px -13px #a1a1a1 inset;
 }
 
 .upload-image-button>.mask-text {
-    /* font-size: clamp(1.25em, 1.5vw, 1.5em); */
-    font-size: 1.5em;
+    font-size: 1.45em;
     padding: 1em 2em;
 
     display: inline-block;
-    background: linear-gradient(to right, var(--primary-clr) 20%, var(--secondary-clr));
+    background: linear-gradient(90deg, var(--primary-clr) 15%, var(--secondary-clr));
     background-clip: text;
     color: transparent;
+}
+
+.upload-warning {
+    display: block;
+    margin: auto;
+    width: clamp(300px, 95vw, 434px);
+    text-align: center;
+    margin-top: 0.75em;
 }
 
 .svg-code-output-container,
 #svg-output-preview {
     display: block;
     margin: auto;
-    /* width: min(100vw, 434px);
-    height: min(100vw, 434px); */
     width: clamp(300px, 95vw, 434px);
     height: clamp(300px, 95vw, 434px);
 }
@@ -83,6 +99,10 @@ ul {
 }
 
 #svg-code-output {
+    --code-bg: #282c34;
+    --code-bg-highlight: #414753;
+    --code-text: #66ccbf;
+
     width: 100%;
     height: 100%;
     padding: 0.5em 1em;
@@ -92,20 +112,25 @@ ul {
     font-family: 'Courier New', monospace;
     font-size: 0.85em;
     line-height: 1.5;
-    background-color: #282c34;
-    color: #ffffff;
+    background-color: var(--code-bg);
+    color: var(--code-text);
     border: none;
     padding: 10px;
-    border-radius: 4px;
+    border-radius: var(--border-radius);
     resize: none;
 
     text-wrap: wrap;
     overflow-y: scroll;
 }
 
+#svg-code-output::selection {
+    background: var(--code-bg-highlight);
+    color: var(--code-text);
+}
+
 #svg-output-preview {
     border: 1px solid black;
-    border-radius: 4px;
+    border-radius: var(--border-radius);
     background-color: white;
     background-image: url(../res/imgs/checkers.svg);
 
@@ -114,6 +139,8 @@ ul {
     align-items: center;
     font-size: 1.8em;
     font-weight: bold;
+
+    user-select: none;
 }
 
 .svg-code-container>h2,
@@ -130,27 +157,86 @@ ul {
     right: var(--scrollbar-width);
 
     padding: clamp(0.5em, 1vh, 1em) 0.5em;
-    background-color: #42b942;
+    background-color: var(--primary-clr);
     color: var(--text-clr-3);
-    border-top-left-radius: 4px;
+    border-top-left-radius: calc(var(--border-radius) / 2);
 
     display: flex;
     align-items: center;
     gap: 0.5em;
+
+    user-select: none;
 }
 
-.clipboard-ic {
+#copy-button object {
     width: 1.5em;
     height: 1.5em;
+    pointer-events: none;
 }
 
-.clipboard-ic svg {
-    cursor: pointer;
+#copy-button object * {
+    fill: green;
+    stroke: green;
 }
 
 #svg-output-preview>svg {
     width: 100%;
     height: 100%;
+}
+
+footer {
+    margin: auto;
+    background-color: var(--tertiary-clr);
+}
+
+footer * {
+    color: var(--text-clr-3);
+}
+
+footer a {
+    color: var(--primary-clr);
+    text-decoration: underline;
+}
+
+.links {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    width: max-content;
+    gap: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.links-icon {
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+    user-select: none;
+}
+
+.links-icon object {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.links-icon object path {
+    fill: green;
+    stroke: green;
+}
+
+.footer-text {
+    width: max-content;
+    margin: auto;
+}
+
+@media (width>900px) {
+    footer {
+        border-top-left-radius: var(--border-radius);
+        border-top-right-radius: var(--border-radius);
+    }
 }
 
 @media (width>1024px) {

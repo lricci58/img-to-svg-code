@@ -63,9 +63,33 @@ const defaultSvgOptions = {
 // };
 
 $(document).ready(function () {
+	svgConverter();
+
+	// waits for document to load base promises
+	isDocumentReady().then((isReady) => {
+		if (!isReady) {
+			documentNotReady();
+			return;
+		}
+
+		const fetchList = {}
+
+		waitForAllPromises(fetchList).then((result) => {
+			hideLoadingScreen();
+		});
+	});
+});
+
+function svgConverter() {
 	const imageInput = document.getElementById('image-input');
 	const svgCodeOutput = document.getElementById('svg-code-output');
 	const svgPreviewOutput = document.getElementById('svg-output-preview');
+
+	const canvas = document.createElement('canvas');
+	const ctx = canvas.getContext('2d');
+	// allow to input preferred size
+	canvas.width = 512;
+	canvas.height = 512;
 
 	svgCodeOutput.addEventListener('change', () => {
 		const currentCode = svgCodeOutput.value;
@@ -96,35 +120,35 @@ $(document).ready(function () {
 			return;
 		}
 
-		const tempURL = URL.createObjectURL(file);
-		ImageTracer.imageToSVG(
-			tempURL, function (svgString) {
-				svgCodeOutput.value = svgString;
-				svgCodeOutput.dispatchEvent(new Event('change'));
-				// svgPreviewOutput.textContent = '';
-				// ImageTracer.appendSVGString(svgString, svgPreviewOutput.id);
-			}, defaultSvgOptions
-		);
+		const img = new Image();
+		const tempUrl = URL.createObjectURL(file);
+		let imageUrl = tempUrl;
+		img.addEventListener('load', () => {
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+			ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+			const resizedImageUrl = canvas.toDataURL();
+
+			if (false) { // check if preferred size is active
+				imageUrl = resizedImageUrl;
+			}
+
+			ImageTracer.imageToSVG(
+				imageUrl,
+				(svgString) => {
+					svgCodeOutput.value = svgString;
+					svgCodeOutput.dispatchEvent(new Event('change'));
+				},
+				defaultSvgOptions
+			);
+		})
+		img.src = tempUrl;
 	});
 
 	document.getElementById('copy-button').addEventListener('click', () => {
 		copyUrl(svgCodeOutput.value);
 	});
-
-	// waits for document to load base promises
-	isDocumentReady().then((isReady) => {
-		if (!isReady) {
-			documentNotReady();
-			return;
-		}
-
-		const fetchList = {}
-
-		waitForAllPromises(fetchList).then((result) => {
-			hideLoadingScreen();
-		});
-	});
-});
+}
 
 function isInvalidSVG(text) {
 	try {

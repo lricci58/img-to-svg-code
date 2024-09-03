@@ -37,9 +37,6 @@
 
 	--scrollbar-width: var(--scrollbar-width-mb);
 
-	/* Text Highlight Color */
-	--highlight-text-clr: #60afff;
-
 	/* Padding Variables */
 	--main-padding-pc: 40px;
 	--main-padding-mb: 20px;
@@ -118,7 +115,8 @@
 }
 
 ::selection {
-	background: var(--highlight-text-clr);
+	background: var(--secondary-clr);
+	color: var(--tertiary-clr);
 }
 
 * {
