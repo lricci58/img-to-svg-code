@@ -62,6 +62,10 @@ const defaultSvgOptions = {
 // 	blurdelta: 20
 // };
 
+var preferredSizeActive = false;
+var preferredWidth = 64;
+var preferredHeight = 64;
+
 $(document).ready(function () {
 	svgConverter();
 
@@ -83,13 +87,13 @@ $(document).ready(function () {
 function svgConverter() {
 	const imageInput = document.getElementById('image-input');
 	const svgCodeOutput = document.getElementById('svg-code-output');
-	const svgPreviewOutput = document.getElementById('svg-output-preview');
+	const svgPreviewOutput = document.getElementById('svg-preview');
 
 	const canvas = document.createElement('canvas');
 	const ctx = canvas.getContext('2d');
 	// allow to input preferred size
-	canvas.width = 512;
-	canvas.height = 512;
+	canvas.width = preferredWidth;
+	canvas.height = preferredHeight;
 
 	svgCodeOutput.addEventListener('change', () => {
 		const currentCode = svgCodeOutput.value;
@@ -129,7 +133,7 @@ function svgConverter() {
 
 			const resizedImageUrl = canvas.toDataURL();
 
-			if (false) { // check if preferred size is active
+			if (preferredSizeActive) { // check if preferred size is active
 				imageUrl = resizedImageUrl;
 			}
 
@@ -138,6 +142,7 @@ function svgConverter() {
 				(svgString) => {
 					svgCodeOutput.value = svgString;
 					svgCodeOutput.dispatchEvent(new Event('change'));
+					imageInput.value = ''; // to reset input
 				},
 				defaultSvgOptions
 			);

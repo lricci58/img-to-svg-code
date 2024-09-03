@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroller">
 
 <head>
     <meta charset="UTF-8">
@@ -27,8 +27,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="js/libraries/imagetracerjs-master/imagetracer_v1.2.6.js"></script>
 
-    <script src="js/base.js" type="text/javascript"></script>
-    <script src="js/home.js" type="text/javascript"></script>
+    <script src="js/base.js"></script>
+    <script src="js/home.js"></script>
 
     <!-- Schema Markup -->
     <script type="application/ld+json">
@@ -92,7 +92,7 @@
         <!-- tool itself, interface -->
         <section class="tool-container">
             <div class="input-container">
-                <input id="image-input" type="file" accept="image/*" />
+                <input id="image-input" type="file" accept="image/*">
                 <button class="upload-image-button" onclick="document.getElementById('image-input').click();">
                     <span class="mask-text">Upload your image</span>
                 </button>
@@ -102,16 +102,17 @@
             <div class="svg-code-container">
                 <h2>SVG Code</h2>
                 <div class="svg-code-output-container">
-                    <textarea id="svg-code-output"></textarea>
+                    <textarea class="scroller" id="svg-code-output"></textarea>
                     <button id="copy-button">
                         Copy code
-                        <object class="clipboard-ic" data="res/imgs/icons/clipboard.svg" type="image/svg+xml"></object>
+                        <img class="clipboard-ic" src="res/imgs/icons/clipboard.svg" alt="clipboard" loading="lazy">
+                        <!-- <object data="res/imgs/icons/clipboard.svg" type="image/svg+xml"></object> -->
                     </button>
                 </div>
             </div>
             <div class="svg-preview-container">
                 <h2>Preview</h2>
-                <object id="svg-output-preview"></object>
+                <div id="svg-preview"></div>
             </div>
         </section>
 
@@ -148,21 +149,36 @@
 
     <footer>
         <ul class="links">
-            <a class="links-icon" href="https://github.com/lricci58" target="_blank">
-                <object data="res/imgs/icons/github.svg" type="image/svg+xml">Github</object>
-            </a>
-            <a class="links-icon" href="https://codepen.io/lricci58" target="_blank">
-                <object data="res/imgs/icons/codepen.svg" type="image/svg+xml">CodePen</object>
-            </a>
-            <a class="links-icon" href="https://www.linkedin.com/in/lricci58/" target="_blank">
-                <object data="res/imgs/icons/linkedin.svg" type="image/svg+xml">LinkedIn</object>
-            </a>
-            <a class="links-icon" href="https://www.instagram.com/lricci58/" target="_blank">
-                <object data="res/imgs/icons/instagram.svg" type="image/svg+xml">Instagram</object>
-            </a>
-            <a class="links-icon" href="https://x.com/lricci58" target="_blank">
-                <object data="res/imgs/icons/twitter.svg" type="image/svg+xml">Twitter</object>
-            </a>
+            <li>
+                <a class="links-icon" href="https://github.com/lricci58" target="_blank">
+                    <img src="res/imgs/icons/github.svg" alt="github" loading="lazy">
+                    <!-- <object data="res/imgs/icons/github.svg" type="image/svg+xml">Github</object> -->
+                </a>
+            </li>
+            <li>
+                <a class="links-icon" href="https://codepen.io/lricci58" target="_blank">
+                    <img src="res/imgs/icons/codepen.svg" alt="codepen" loading="lazy">
+                    <!-- <object data="res/imgs/icons/codepen.svg" type="image/svg+xml">CodePen</object> -->
+                </a>
+            </li>
+            <li>
+                <a class="links-icon" href="https://www.linkedin.com/in/lricci58/" target="_blank">
+                    <img src="res/imgs/icons/linkedin.svg" alt="linkedin" loading="lazy">
+                    <!-- <object data="res/imgs/icons/linkedin.svg" type="image/svg+xml">LinkedIn</object> -->
+                </a>
+            </li>
+            <li>
+                <a class="links-icon" href="https://www.instagram.com/lricci58/" target="_blank">
+                    <img src="res/imgs/icons/instagram.svg" alt="instagram" loading="lazy">
+                    <!-- <object data="res/imgs/icons/instagram.svg" type="image/svg+xml">Instagram</object> -->
+                </a>
+            </li>
+            <li>
+                <a class="links-icon" href="https://x.com/lricci58" target="_blank">
+                    <img src="res/imgs/icons/twitter.svg" alt="twitter" loading="lazy">
+                    <!-- <object data="res/imgs/icons/twitter.svg" type="image/svg+xml">Twitter</object> -->
+                </a>
+            </li>
         </ul>
 
         <p class="footer-text">

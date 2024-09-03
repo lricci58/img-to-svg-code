@@ -1,61 +1,82 @@
-<svg viewBox="0 0 230 225" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
+        opacity="0.5058823529411764" d="M 60.5 1 L 61.5 3 L 60.5 1 Z " />
+    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
+        opacity="0.5058823529411764" d="M 34.5 24 L 35 26.5 L 34 26.5 L 34.5 24 Z " />
+    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
+        opacity="0.5058823529411764" d="M 50.5 25 L 51.5 27 L 50.5 25 Z " />
+    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
+        opacity="0.5058823529411764" d="M 54.5 35 L 55 53.5 L 54 53.5 L 54.5 35 Z " />
+    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
+        opacity="0.5058823529411764" d="M 34.5 38 L 35 54.5 L 34 54.5 L 34.5 38 Z " />
+    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
+        opacity="0.5058823529411764" d="M 61.5 61 L 60.5 63 L 61.5 61 Z " />
     <path fill="rgb(0,0,0)" stroke="rgb(0,0,0)" stroke-width="1" opacity="0"
-        d="M 0 0 L 20 0.5 Q 10.8 3.3 6 10.5 L 2 19.5 L 2 206.5 Q 5.2 215.8 12.5 221 L 20 224.5 L 0 225 L 0 0 Z " />
+        d="M 0 0 L 4 0.5 L 1 2.5 L 0.5 4 L 0 0 Z " />
     <path fill="rgb(0,0,0)" stroke="rgb(0,0,0)" stroke-width="1" opacity="0"
-        d="M 209.5 0 L 229.5 0 L 230 0.5 L 230 225 L 209 224.5 Q 216.6 222.6 221 217.5 L 227 206.5 L 227 18.5 Q 223.9 8 215.5 3 L 209.5 1 L 209.5 0 Z " />
+        d="M 60.5 0 Q 66.2 -1.8 64 4.5 L 63 4.5 L 60.5 0 Z " />
     <path fill="rgb(0,0,0)" stroke="rgb(0,0,0)" stroke-width="1" opacity="0"
-        d="M 49.5 31 L 56.5 31 Q 58.3 34.2 63.5 34 L 70 40.5 L 73 46.5 L 72 48.5 L 74 51.5 L 72 54.5 L 73 56.5 Q 70.4 63.9 64.5 68 L 57.5 70 L 55.5 72 L 51.5 72 Q 42.9 70.1 38 64.5 L 33 54.5 L 33 47.5 Q 35.8 46.8 35 42.5 L 40.5 36 L 49.5 31 Z " />
+        d="M 14.5 9 L 19 11.5 L 20 15.5 L 17.5 19 L 13.5 20 Q 9 19 10 12.5 L 11 10 L 14.5 9 Z " />
     <path fill="rgb(0,0,0)" stroke="rgb(0,0,0)" stroke-width="1" opacity="0"
-        d="M 149.5 82 L 163.5 82 L 167.5 84 L 169.5 84 Q 181.7 87.3 188 96.5 L 195 112.5 L 194 114.5 Q 197.2 115.7 196 121.5 L 195 122.5 L 195 193 L 162 193 L 162 132.5 L 162 130.5 Q 160.9 121.1 155.5 116 L 150.5 113 Q 149 115.5 147.5 112 L 142.5 113 L 140.5 112 L 129 118.5 L 126 123.5 L 125 130.5 L 123 134.5 L 124 135.5 L 124 193 L 91.5 193 L 91 192.5 L 91 86 L 93.5 85 L 123 85 Q 125.1 88.4 124 96 L 126.5 96 Q 133.6 87.1 145.5 83 L 147.5 84 L 149.5 82 Z " />
+        d="M 40.5 24 L 47.5 24 L 52 27.5 L 54 31.5 L 54 55 L 45 55 L 45 38.5 L 45 36.5 Q 45.5 32.5 42.5 32 L 39.5 31 L 35 33 L 34 35.5 L 34 55 L 26.5 55 L 26 54.5 L 26 25 L 33.5 25 L 34 27 L 35.5 27 L 40.5 24 Z " />
     <path fill="rgb(0,0,0)" stroke="rgb(0,0,0)" stroke-width="1" opacity="0"
-        d="M 37.5 85 L 68.5 85 L 71 87.5 L 71 192.5 L 70.5 193 L 36 193 L 36 86.5 L 37.5 85 Z " />
+        d="M 10 25 L 18.5 25 L 19 25.5 L 19 55 L 10.5 55 L 10 54.5 L 10 25 Z " />
+    <path fill="rgb(0,0,0)" stroke="rgb(0,0,0)" stroke-width="1" opacity="0"
+        d="M 63.5 59 L 64 64 L 60 63.5 L 62 63 L 63.5 59 Z " />
+    <path fill="rgb(0,0,0)" stroke="rgb(0,0,0)" stroke-width="1" opacity="0"
+        d="M 0.5 60 L 2.5 63 L 4 63.5 L 0 64 L 0.5 60 Z " />
     <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
-        opacity="0.7843137254901961" d="M 57.5 31 L 63 33.5 L 61.5 34 Q 57.5 33.5 57.5 31 Z " />
+        opacity="0.996078431372549" d="M 18.5 9 L 19.5 11 L 18.5 9 Z " />
     <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
-        opacity="0.7843137254901961" d="M 45.5 32 L 48 32.5 L 45.5 33 L 45.5 32 Z " />
+        opacity="0.996078431372549" d="M 19.5 18 L 18.5 20 L 19.5 18 Z " />
     <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
-        opacity="0.7843137254901961" d="M 43.5 33 L 41.5 36 L 38.5 38 L 40.5 35 L 43.5 33 Z " />
+        opacity="0.996078431372549" d="M 9.5 24 L 10 55.5 L 9 55.5 L 9.5 24 Z " />
     <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
-        opacity="0.7843137254901961" d="M 64.5 34 L 69.5 40 L 64.5 34 Z " />
+        opacity="0.996078431372549" d="M 51.5 25 L 52.5 27 L 51.5 25 Z " />
     <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
-        opacity="0.7843137254901961" d="M 35.5 60 L 38 63.5 L 36 62.5 L 35.5 60 Z " />
+        opacity="0.996078431372549" d="M 42.5 33 L 43.5 35 L 42.5 33 Z " />
     <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
-        opacity="0.7843137254901961" d="M 67.5 65 L 66.5 67 L 67.5 65 Z " />
-    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
-        opacity="0.7843137254901961" d="M 41.5 67 L 42.5 69 L 41.5 67 Z " />
-    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
-        opacity="0.7843137254901961" d="M 62.5 68 L 64 68.5 L 57.5 71 L 57.5 70 L 62.5 68 Z " />
-    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
-        opacity="0.7843137254901961" d="M 164.5 82 L 168 83.5 L 165.5 84 L 164.5 82 Z " />
-    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
-        opacity="0.7843137254901961" d="M 69.5 85 L 70.5 87 L 69.5 85 Z " />
-    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
-        opacity="0.7843137254901961" d="M 136.5 87 L 135.5 89 L 133.5 90 L 134.5 88 L 136.5 87 Z " />
-    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
-        opacity="0.7843137254901961" d="M 178.5 87 L 179.5 89 L 178.5 87 Z " />
-    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
-        opacity="0.7843137254901961" d="M 182.5 90 L 186.5 95 L 182.5 90 Z " />
-    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
-        opacity="0.7843137254901961" d="M 129.5 92 L 128.5 94 L 129.5 92 Z " />
-    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
-        opacity="0.7843137254901961" d="M 188.5 97 L 189.5 99 L 188.5 97 Z " />
-    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
-        opacity="0.7843137254901961" d="M 193.5 107 L 194 109.5 L 193 109.5 L 193.5 107 Z " />
-    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
-        opacity="0.7843137254901961" d="M 150.5 113 L 153 114.5 L 151.5 114 L 150.5 113 Z " />
-    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
-        opacity="0.7843137254901961" d="M 194.5 113 L 196 115.5 L 194 114.5 L 194.5 113 Z " />
-    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
-        opacity="0.7843137254901961" d="M 131.5 116 L 129.5 119 L 131.5 116 Z " />
-    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
-        opacity="0.7843137254901961"
-        d="M 155.5 116 L 157.5 119 Q 155.3 119.8 156 117.5 L 155.5 116 Z " />
-    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
-        opacity="0.7843137254901961" d="M 195.5 122 L 196 194 L 162 193.5 L 195 193 L 195.5 122 Z " />
-    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
-        opacity="0.7843137254901961" d="M 36.5 193 L 70 193.5 L 36.5 194 L 36.5 193 Z " />
-    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
-        opacity="0.7843137254901961" d="M 91.5 193 L 124 193.5 L 91.5 194 L 91.5 193 Z " />
+        opacity="0.996078431372549" d="M 44.5 37 L 45 54.5 L 44 54.5 L 44.5 37 Z " />
     <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1" opacity="1"
-        d="M 20.5 0 L 208.5 0 L 215.5 3 L 224 11.5 L 227 18.5 L 227 206.5 L 224 213.5 L 219.5 219 L 208.5 225 L 20.5 225 Q 11.2 221.8 6 214.5 L 2 205.5 L 2 19.5 Q 4.8 9.3 12.5 4 L 20.5 0 Z M 50 31 L 41 35 Q 35 40 33 48 Q 32 58 36 63 Q 41 70 51 72 Q 61 72 67 67 L 72 60 L 74 52 Q 72 50 73 46 L 70 40 Q 65 30 50 31 Z M 150 82 Q 137 85 130 92 L 127 96 L 124 96 L 124 86 L 124 85 L 91 85 L 91 194 L 92 194 L 124 194 L 124 132 L 128 121 Q 132 115 140 113 Q 152 111 156 118 Q 155 120 158 119 L 160 123 L 162 131 L 162 194 L 196 194 L 196 116 L 193 105 L 187 95 Q 181 88 173 84 L 165 82 L 150 82 Z M 36 85 L 36 194 L 37 194 L 70 194 L 71 193 L 71 87 L 70 85 L 36 85 Z " />
+        d="M 6.5 0 L 57.5 0 L 60 1 L 60 3 Q 62.7 1.9 62 4.5 L 63 5.5 L 63 58.5 L 59.5 63 L 57.5 64 L 6.5 64 L 2 60.5 L 1 58.5 L 1 5.5 L 4.5 1 L 6.5 0 Z M 13 8 L 9 12 Q 8 20 13 21 L 19 20 L 21 17 L 20 11 Q 18 7 13 8 Z M 40 23 L 38 24 L 35 26 L 35 24 L 25 24 L 25 56 L 26 56 L 35 56 L 35 37 L 36 34 L 42 33 L 44 36 L 44 55 L 46 56 L 55 56 L 55 31 L 53 27 Q 50 21 40 23 Z M 9 24 L 9 56 L 20 56 L 20 24 L 9 24 Z " />
+    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
+        opacity="0.8392156862745098" d="M 13.5 8 L 16 8.5 L 13.5 9 L 13.5 8 Z " />
+    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
+        opacity="0.8392156862745098" d="M 11.5 9 L 10.5 11 L 11.5 9 Z " />
+    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
+        opacity="0.8392156862745098" d="M 10.5 18 L 11.5 20 L 10.5 18 Z " />
+    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
+        opacity="0.8392156862745098" d="M 13.5 20 L 17 20.5 L 13.5 21 L 13.5 20 Z " />
+    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
+        opacity="0.8392156862745098" d="M 36.5 25 L 35.5 27 L 36.5 25 Z " />
+    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
+        opacity="0.8392156862745098" d="M 38.5 32 L 42 32.5 L 38.5 33 L 38.5 32 Z " />
+    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
+        opacity="0.8392156862745098" d="M 10.5 55 L 19 55.5 L 10.5 56 L 10.5 55 Z " />
+    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
+        opacity="0.8392156862745098" d="M 26.5 55 L 34 55.5 L 26.5 56 L 26.5 55 Z " />
+    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
+        opacity="0.8392156862745098" d="M 45.5 55 L 54 55.5 L 45.5 56 L 45.5 55 Z " />
+    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1" opacity="0.4"
+        d="M 0.5 6 L 1 58.5 L 0 58.5 L 0.5 6 Z " />
+    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
+        opacity="0.1843137254901961" d="M 2.5 1 L 1.5 3 L 2.5 1 Z " />
+    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
+        opacity="0.1843137254901961" d="M 63.5 5 L 64 58.5 L 63 58.5 L 63.5 5 Z " />
+    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
+        opacity="0.1843137254901961" d="M 10.5 17 L 12.5 20 L 10.5 17 Z " />
+    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
+        opacity="0.1843137254901961" d="M 42.5 23 L 46 23.5 L 42.5 24 L 42.5 23 Z " />
+    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
+        opacity="0.1843137254901961" d="M 10.5 24 L 19 24.5 L 10.5 25 L 10.5 24 Z " />
+    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
+        opacity="0.1843137254901961" d="M 26.5 24 L 34 24.5 L 26.5 25 L 26.5 24 Z " />
+    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
+        opacity="0.1843137254901961" d="M 48.5 24 L 49.5 26 L 48.5 24 Z " />
+    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
+        opacity="0.1843137254901961" d="M 1.5 61 L 2.5 63 L 1.5 61 Z " />
+    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
+        opacity="0.3176470588235294" d="M 19.5 25 L 20 54.5 L 19 54.5 L 19.5 25 Z " />
+    <path fill="#e0e0e0" stroke="#e0e0e0" stroke-width="1"
+        opacity="0.3176470588235294" d="M 25.5 25 L 26 54.5 L 25 54.5 L 25.5 25 Z " />
 </svg>

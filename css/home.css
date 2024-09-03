@@ -20,7 +20,12 @@ footer {
 }
 
 main {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: 2em;
 }
@@ -43,7 +48,12 @@ ul {
 }
 
 .tool-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: 1em;
 }
@@ -60,11 +70,18 @@ ul {
     background-color: var(--tertiary-clr);
     outline: none;
 
+    -webkit-box-shadow: 10px 10px 15px 2px #8b8686;
+
     box-shadow: 10px 10px 15px 2px #8b8686;
+    -webkit-transition: -webkit-box-shadow 0.15s ease-out;
+    transition: -webkit-box-shadow 0.15s ease-out;
+    -o-transition: box-shadow 0.15s ease-out;
     transition: box-shadow 0.15s ease-out;
+    transition: box-shadow 0.15s ease-out, -webkit-box-shadow 0.15s ease-out;
 }
 
 .upload-image-button:hover {
+    -webkit-box-shadow: 10px 10px 15px 5px #8b8686;
     box-shadow: 10px 10px 15px 5px #8b8686;
 }
 
@@ -73,7 +90,10 @@ ul {
     padding: 1em 2em;
 
     display: inline-block;
+    background: -webkit-gradient(linear, left top, right top, color-stop(15%, var(--primary-clr)), to(var(--secondary-clr)));
+    background: -o-linear-gradient(left, var(--primary-clr) 15%, var(--secondary-clr));
     background: linear-gradient(90deg, var(--primary-clr) 15%, var(--secondary-clr));
+    -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
 }
@@ -87,7 +107,7 @@ ul {
 }
 
 .svg-code-output-container,
-#svg-output-preview {
+#svg-preview {
     display: block;
     margin: auto;
     width: clamp(300px, 95vw, 434px);
@@ -123,22 +143,41 @@ ul {
     overflow-y: scroll;
 }
 
+#svg-code-output::-moz-selection {
+    background: var(--code-bg-highlight);
+    color: var(--code-text);
+}
+
 #svg-code-output::selection {
     background: var(--code-bg-highlight);
     color: var(--code-text);
 }
 
-#svg-output-preview {
+#svg-preview {
     border: 1px solid black;
     border-radius: var(--border-radius);
     background-color: white;
     background-image: url(../res/imgs/checkers.svg);
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     font-size: 1.8em;
     font-weight: bold;
+
+    -webkit-user-select: none;
+
+    -moz-user-select: none;
+
+    -ms-user-select: none;
 
     user-select: none;
 }
@@ -161,25 +200,32 @@ ul {
     color: var(--text-clr-3);
     border-top-left-radius: calc(var(--border-radius) / 2);
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     gap: 0.5em;
+
+    -webkit-user-select: none;
+
+    -moz-user-select: none;
+
+    -ms-user-select: none;
 
     user-select: none;
 }
 
-#copy-button object {
+.clipboard-ic {
     width: 1.5em;
     height: 1.5em;
     pointer-events: none;
 }
 
-#copy-button object * {
-    fill: green;
-    stroke: green;
-}
-
-#svg-output-preview>svg {
+#svg-preview>svg {
     width: 100%;
     height: 100%;
 }
@@ -201,10 +247,14 @@ footer a {
 .links {
     padding: 0;
     list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     gap: 1em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
     margin-left: auto;
     margin-right: auto;
 }
@@ -213,10 +263,13 @@ footer a {
     display: block;
     width: 1.5em;
     height: 1.5em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
 }
 
-.links-icon object {
+.links-icon img {
     width: 100%;
     height: 100%;
     pointer-events: none;
@@ -224,6 +277,8 @@ footer a {
 
 .footer-text {
     max-width: 100%;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     margin: auto;
 }
@@ -242,10 +297,23 @@ footer a {
 
 @media (width>1024px) {
     .tool-container {
+        display: -ms-grid;
         display: grid;
+        -ms-grid-columns: 1fr 1em 1fr;
         grid-template-columns: repeat(2, 1fr);
+        -ms-grid-rows: auto;
         grid-template-rows: auto;
         gap: 1em;
+    }
+
+    .tool-container>*:nth-child(1) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+    }
+
+    .tool-container>*:nth-child(2) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 3;
     }
 
     .input-container {
