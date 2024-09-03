@@ -3,10 +3,10 @@
 A tool to get the SVG code for any given image (not only svg code).
 
 ## Table of contents
-- [The How](#how-it-works)
-- [The Why](#why-i-created-this)
-- [The Thanks](#acknowledgments)
-- [The License](#the-license)
+- [How it Works](#how-it-works)
+- [Why I Created This](#why-i-created-this)
+- [Acknowledgments](#acknowledgments)
+- [License](#the-license)
 
 ## How it Works
 
@@ -32,7 +32,7 @@ which was a key element in the creation of this tool.
 
 ---
 
-## The License
+## License
 ### The Unlicense / PUBLIC DOMAIN
 
 This is free and unencumbered software released into the public domain.
