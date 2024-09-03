@@ -152,31 +152,29 @@ function svgConverter() {
 
 function isInvalidSVG(text) {
 	try {
-		// Parse the text as XML
 		const parser = new DOMParser();
 		const xmlDoc = parser.parseFromString(text, "image/svg+xml");
 
-		// Check for parsing errors
 		const parseError = xmlDoc.getElementsByTagName("parsererror");
 		if (parseError.length > 0) {
-			return true; // Text is not a valid SVG
+			return true;
 		}
 
-		// Check if the root element is an SVG element
 		const rootElement = xmlDoc.documentElement;
 		if (rootElement.nodeName !== "svg") {
-			return true; // Text is not a valid SVG
+			return true;
 		}
 
-		return false; // Text is a valid SVG
+		return false;
 	} catch (e) {
-		return true; // An error occurred, so it's not a valid SVG
+		return true;
 	}
 }
 
 function copyUrl(url) {
 	if (navigator.clipboard) {
 		navigator.clipboard.writeText(url);
+		alert('text copied!');
 		return; // code should end here normally
 	}
 

@@ -60,12 +60,12 @@ ul {
     background-color: var(--tertiary-clr);
     outline: none;
 
-    box-shadow: 10px 10px 15px 2px #8b8686, 8px 6px 15px -10px #a1a1a1 inset;
+    box-shadow: 10px 10px 15px 2px #8b8686;
     transition: box-shadow 0.15s ease-out;
 }
 
 .upload-image-button:hover {
-    box-shadow: 10px 10px 15px 5px #8b8686, 8px 6px 15px -13px #a1a1a1 inset;
+    box-shadow: 10px 10px 15px 5px #8b8686;
 }
 
 .upload-image-button>.mask-text {
@@ -83,7 +83,7 @@ ul {
     margin: auto;
     width: clamp(300px, 95vw, 434px);
     text-align: center;
-    margin-top: 0.75em;
+    margin-top: 1em;
 }
 
 .svg-code-output-container,
@@ -203,7 +203,7 @@ footer a {
     list-style-type: none;
     display: flex;
     width: max-content;
-    gap: 0.5em;
+    gap: 1em;
     margin-bottom: 0.5em;
     margin-left: auto;
     margin-right: auto;
@@ -222,12 +222,8 @@ footer a {
     pointer-events: none;
 }
 
-.links-icon object path {
-    fill: green;
-    stroke: green;
-}
-
 .footer-text {
+    max-width: 100%;
     width: max-content;
     margin: auto;
 }
@@ -236,6 +232,11 @@ footer a {
     footer {
         border-top-left-radius: var(--border-radius);
         border-top-right-radius: var(--border-radius);
+    }
+
+    .links,
+    .footer-text {
+        margin-left: calc(var(--min-padding) * 2);
     }
 }
 
