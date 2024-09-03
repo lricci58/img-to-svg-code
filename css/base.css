@@ -1,0 +1,214 @@
+@charset "UTF-8";
+
+@import url("/css/includes/fonts.css");
+
+:root {
+	--primary-clr: #359aff;
+	--secondary-clr: #ffe98c;
+	--tertiary-clr: #323238;
+
+	/* Background Colors */
+	--bg-clr-1: #f0f4ff;
+	--bg-clr-2: #ffffff;
+	--bg-clr-3: #1c1c1e;
+
+	/* Text Colors */
+	--text-clr-1: #2c3e50;
+	--text-clr-2: #4a4a4a;
+	--text-clr-3: #e0e0e0;
+	--highlighted-text-clr: #ff9f1c;
+
+	/* Font Declaration */
+	--outfit-regular: "Outfit Regular";
+	--outfit-bold: "Outfit Bold";
+	--outfit-light: "Outfit Light";
+
+	--ubuntu-regular: "Ubuntu Regular";
+	--ubuntu-bold: "Ubuntu Bold";
+	--ubuntu-light: "Ubuntu Light";
+
+	/* Scrollbar */
+	--scrollbar-track-color: #14111100;
+	--scrollbar-thumb-color: var(--lv2-clr1);
+	--scrollbar-thumb-hover-color: var(--lv1-clr5);
+
+	--scrollbar-width-pc: 8px;
+	--scrollbar-width-mb: 0px;
+
+	--scrollbar-width: var(--scrollbar-width-mb);
+
+	/* Text Highlight Color */
+	--highlight-text-clr: #60afff;
+
+	/* Padding Variables */
+	--main-padding-pc: 40px;
+	--main-padding-mb: 20px;
+	--main-padding: var(--main-padding-mb);
+
+	/* Other Variables */
+	--boxshadow-color: #00000044;
+}
+
+/* === DARK MODE === */
+
+[data-theme="dark"] {
+	/* Background Colors */
+	--bg-clr-1: #0f172a;
+	--bg-clr-2: #26292d;
+	--bg-clr-3: #f0f4ff;
+
+	/* Text Colors */
+	--text-clr-1: #e0e0e0;
+	--text-clr-2: #ffffff;
+	--text-clr-3: #2c3e50;
+	--highlighted-text-clr: #ff6584;
+}
+
+/* === FONTS === */
+
+.outfit {
+	font-family: var(--outfit-regular);
+}
+
+.outfit.bold {
+	font-family: var(--outfit-bold);
+}
+
+.outfit.light {
+	font-family: var(--outfit-light);
+}
+
+.ubuntu {
+	font-family: var(--ubuntu-regular);
+}
+
+.ubuntu.bold {
+	font-family: var(--ubuntu-bold);
+}
+
+.ubuntu.light {
+	font-family: var(--ubuntu-light);
+}
+
+.primary {
+	color: var(--primary-clr);
+}
+
+.secondary {
+	color: var(--secondary-clr);
+}
+
+/* === GENERALS === */
+
+::-webkit-scrollbar {
+	width: var(--scrollbar-width);
+	height: var(--scrollbar-width);
+}
+
+::-webkit-scrollbar-track {
+	background: var(--scrollbar-track-color);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--scrollbar-thumb-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--scrollbar-thumb-hover-color);
+}
+
+::selection {
+	background: var(--highlight-text-clr);
+}
+
+* {
+	font-family: var(--outfit-regular);
+	color: var(--text-clr-1);
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	margin: 0;
+	-webkit-appearance: none;
+}
+
+input[type=number] {
+	appearance: textfield;
+	-webkit-appearance: textfield;
+	-moz-appearance: textfield;
+}
+
+textarea {
+	resize: none;
+}
+
+img {
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+textarea:focus,
+input:focus {
+	outline: none;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+a,
+button {
+	margin: 0;
+	padding: 0;
+	background-color: unset;
+	border: none;
+	cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+	margin: 0;
+}
+
+body {
+	min-height: 100vh;
+	margin: 0;
+	background-color: var(--bg-clr-1) !important;
+}
+
+/* === OTHER === */
+
+.alternative-section {
+	background-color: var(--bg-clr-3);
+}
+
+.alternative-section * {
+	color: var(--text-clr-3);
+}
+
+/* === MEDIA QUERY === */
+
+@media (width>425px) {}
+
+@media (width>768px) {}
+
+@media (width>1024px) {
+	:root {
+		--scrollbar-width: var(--scrollbar-width-pc);
+		--main-padding: var(--main-padding-pc);
+	}
+}

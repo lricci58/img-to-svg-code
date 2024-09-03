@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords"
+        content="image to svg converter, svg code generator, online svg converter, convert png to svg, convert jpg to svg, free image to svg tool, svg xml code, svg converter online, image to svg online, raster to vector converter, svg format, image to vector, convert gif to svg, scalable vector graphics, svg for web, optimize images for web, web design tools">
+    <meta name="description"
+        content="Convert images to SVG code instantly with this free online Image to SVG Code Converter. Upload PNG, JPG, or SVG files and get high-quality SVG code. No software download needed!">
+    <title>Image to SVG-Code | Online Converter</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/includes/loading-screen.css">
+    <link rel="stylesheet" href="/css/home.css">
+
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="/js/libraries/imagetracerjs-master/imagetracer_v1.2.6.js"></script>
+
+    <script src="/js/base.js" type="text/javascript"></script>
+    <script src="/js/home.js" type="text/javascript"></script>
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [{
+            "@type": "Question",
+            "name": "What image formats can I convert to SVG?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can convert PNG, JPG, JPEG, GIF, and even existing SVG files to SVG XML code with the converter."
+            }
+          }, {
+            "@type": "Question",
+            "name": "Is this tool free to use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! The Image to SVG Code Converter is completely free, with no hidden charges or sign-up requirements."
+            }
+          }, {
+            "@type": "Question",
+            "name": "How does the converter handle white or transparent images?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The converter ensures accurate conversion, even with white or transparent images, by optimizing color thresholds and detection algorithms."
+            }
+          }, {
+            "@type": "Question",
+            "name": "Can I use the SVG code on my website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely! Once converted, you can embed the SVG code directly into your HTML for high-quality vector graphics."
+            }
+          }]
+        }
+        </script>
+</head>
+
+<body>
+    <header>
+        <!-- main heading -->
+        <h1>Free Online Image to SVG Code Converter</h1>
+
+        <!-- intro paragraph -->
+        <p>Looking for a quick and easy way to convert your images to SVG format? This Image to SVG Code Converter is
+            the
+            perfect solution! Whether you have a PNG, JPG, or even an existing SVG file, this tool will instantly
+            generate
+            the corresponding SVG XML code for you. No downloads, no hassle — just upload your image, and you're ready
+            to
+            go!
+        </p>
+    </header>
+
+    <!-- tool itself, interface -->
+    <section class="tool-container">
+        <input type="file" id="image-input" accept="image/*" />
+        <pre id="svg-code-output"></pre>
+        <h2>Preview</h2>
+        <object id="svg-output-preview"></object>
+    </section>
+
+    <!-- features -->
+    <section>
+        <h2>It's the Definitive Tool</h2>
+        <ul>
+            <li>Convert Multiple Image Formats: Easily convert PNG, JPG, JPEG, GIF, and more to SVG format.</li>
+            <li>Get the SVG Code: Get the exact SVG XML code to embed directly into your HTML.</li>
+            <li>Optimize Your Web Performance: SVG files are lightweight, scalable, and perfect for web use.</li>
+            <li>Fast and Secure: Upload your files securely and get results in seconds.</li>
+            <li>Free to Use: No hidden costs, no sign-ups — just a simple, easy-to-use online tool.</li>
+        </ul>
+    </section>
+
+    <!-- how to use -->
+    <section>
+        <h2>How to Use The Image to SVG Code Converter</h2>
+        <ol>
+            <li>Upload Your Image: Click the "Upload" button and select the image file you want to convert. We support
+                PNG,
+                JPG, JPEG, and SVG formats.</li>
+            <li>Automatic Conversion: The tool will automatically process your image and generate the SVG code.</li>
+            <li>Copy the SVG Code: Preview the SVG output and simply copy the code to use on your website or project.
+            </li>
+        </ol>
+    </section>
+
+    <!-- why convert -->
+    <section>
+        <h2>Why Convert Images to SVG?</h2>
+        <h4>SVG (Scalable Vector Graphics) is a versatile image format that is widely used on websites and digital
+            designs
+            due to its many benefits:</h4>
+        <ul>
+            <li>Scalable and Responsive: SVG images retain their quality at any size, making them perfect for responsive
+                web
+                designs.</li>
+            <li>Smaller File Sizes: SVG files are typically smaller than raster images, which means faster loading times
+                and
+                better SEO performance.</li>
+            <li>Editable and Searchable: Unlike raster images, SVGs are made up of XML code, which makes them easy to
+                edit,
+                animate, and search for text content.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Frequently Asked Questions (FAQs)</h2>
+        <li>
+            <h5>What image formats can I convert to SVG?</h5>
+            <span>You can convert PNG, JPG, JPEG, GIF, and even existing SVG files to SVG XML code with the
+                converter.</span>
+        </li>
+        <li>
+            <h5>Is this tool free to use?</h5>
+            <span>Yes! The Image to SVG Code Converter is completely free, with no hidden charges or sign-up
+                requirements.</span>
+        </li>
+        <li>
+            <h5>How does the converter handle white or transparent images?</h5>
+            <span>The converter ensures accurate conversion, even with white or transparent images, by optimizing color
+                thresholds and detection algorithms.</span>
+        </li>
+        <li>
+            <h5>Can I use the SVG code on my website?</h5>
+            <span>Absolutely! Once converted, you can embed the SVG code directly into your HTML for high-quality vector
+                graphics.</span>
+        </li>
+    </section>
+
+    <footer>
+        <!-- About: Learn more about the free tools designed to help developers and designers create faster, optimized web experiences.
+        Contact: Have questions or feedback? Reach out here.
+        Links: Github, Codepen, Instagram, Twitter, Email, and LinkedIn. -->
+        <!-- Made by Lucas Ricci | View on GitHub(https://github.com/lricci58/img-to-svg-code) -->
+    </footer>
+</body>
+
+</html>
