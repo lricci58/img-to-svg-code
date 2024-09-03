@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@import url("/css/includes/fonts.css");
+@import url("css/includes/fonts.css");
 
 :root {
 	--primary-clr: #359aff;
