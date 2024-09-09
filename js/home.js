@@ -1,21 +1,14 @@
 const defaultSvgOptions = {
-	// Tracing
 	corsenabled: false,
 	ltres: 1,
 	qtres: 1,
 	pathomit: 8,
 	rightangleenhance: true,
-
-	// Color quantization
 	colorsampling: 2,
 	numberofcolors: 16,
 	mincolorratio: 0,
 	colorquantcycles: 3,
-
-	// Layering method
 	layering: 0,
-
-	// SVG rendering
 	strokewidth: 1,
 	linefilter: false,
 	scale: 1,
@@ -24,49 +17,38 @@ const defaultSvgOptions = {
 	desc: false,
 	lcpr: 0,
 	qcpr: 0,
-
-	// Blur
 	blurradius: 0,
 	blurdelta: 20
 }
 
-// const defaultSvgOptions = {
-// 	// Tracing
-// 	corsenabled: false,
-// 	ltres: 1,
-// 	qtres: 1,
-// 	pathomit: 8,
-// 	rightangleenhance: true,
-
-// 	// Color quantization
-// 	colorsampling: 0, // Set to 0 for a fixed number of colors
-// 	numberofcolors: 2, // Limit colors to black and white
-// 	mincolorratio: 1, // Increase to prioritize dominant colors (black and white)
-// 	colorquantcycles: 1, // Reduce the number of quantization cycles for a simpler result
-
-// 	// Layering method
-// 	layering: 0,
-
-// 	// SVG rendering
-// 	strokewidth: 1,
-// 	linefilter: false,
-// 	scale: 1,
-// 	roundcoords: 1,
-// 	viewbox: true,
-// 	desc: false,
-// 	lcpr: 0,
-// 	qcpr: 0,
-
-// 	// Blur
-// 	blurradius: 0,
-// 	blurdelta: 20
-// };
+const blackAndWhiteOptions = {
+	corsenabled: false,
+	ltres: 1,
+	qtres: 1,
+	pathomit: 8,
+	rightangleenhance: true,
+	colorsampling: 0,
+	numberofcolors: 2,
+	mincolorratio: 1,
+	colorquantcycles: 1,
+	layering: 0,
+	strokewidth: 1,
+	linefilter: false,
+	scale: 1,
+	roundcoords: 1,
+	viewbox: true,
+	desc: false,
+	lcpr: 0,
+	qcpr: 0,
+	blurradius: 0,
+	blurdelta: 20
+};
 
 var preferredSizeActive = false;
 var preferredWidth = 64;
 var preferredHeight = 64;
 
-$(document).ready(function () {
+document.addEventListener('DOMContentLoaded', function () {
 	svgConverter();
 
 	// waits for document to load base promises
@@ -79,7 +61,7 @@ $(document).ready(function () {
 		const fetchList = {}
 
 		waitForAllPromises(fetchList).then((result) => {
-			hideLoadingScreen();
+			// hideLoadingScreen();
 		});
 	});
 });
@@ -95,7 +77,7 @@ function svgConverter() {
 	canvas.width = preferredWidth;
 	canvas.height = preferredHeight;
 
-	svgCodeOutput.addEventListener('change', () => {
+	svgCodeOutput.addEventListener('change', function () {
 		const currentCode = svgCodeOutput.value;
 
 		if (currentCode == '') {
@@ -127,7 +109,7 @@ function svgConverter() {
 		const img = new Image();
 		const tempUrl = URL.createObjectURL(file);
 		let imageUrl = tempUrl;
-		img.addEventListener('load', () => {
+		img.addEventListener('load', function () {
 			ctx.clearRect(0, 0, canvas.width, canvas.height);
 			ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 
@@ -150,7 +132,7 @@ function svgConverter() {
 		img.src = tempUrl;
 	});
 
-	document.getElementById('copy-button').addEventListener('click', () => {
+	document.getElementById('copy-button').addEventListener('click', function () {
 		copyUrl(svgCodeOutput.value);
 	});
 }

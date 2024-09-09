@@ -1,6 +1,6 @@
 var documentReady = false;
 
-$(document).ready(function () {
+document.addEventListener('DOMContentLoaded', function () {
 	const basePromiseList = {}
 
 	waitForAllPromises(basePromiseList).then((fetchedResults) => { documentReady = true; });
@@ -21,7 +21,7 @@ async function waitForAllPromises(promises) {
 
 function isDocumentReady() {
 	return new Promise((resolve) => {
-		const intervalId = setInterval(() => {
+		const intervalId = setInterval(function () {
 			if (documentReady) {
 				clearInterval(intervalId);
 				resolve(true);
@@ -32,7 +32,7 @@ function isDocumentReady() {
 
 function promiseWithTimeout(promise, timeoutTime) {
 	return new Promise((resolve) => {
-		const timer = setTimeout(() => {
+		const timer = setTimeout(function () {
 			resolve('Timeout');
 		}, timeoutTime);
 
@@ -113,13 +113,13 @@ function addEvent(element, eventType, event) {
 
 // *** LOADING SCREEN ***
 
-function showLoadingScreen(time = 400) {
-	$('#loading-screen').fadeIn(time);
-}
+// function showLoadingScreen(time = 400) {
+// 	$('#loading-screen').fadeIn(time);
+// }
 
-function hideLoadingScreen(time = 400) {
-	$('#loading-screen').fadeOut(time);
-}
+// function hideLoadingScreen(time = 400) {
+// 	$('#loading-screen').fadeOut(time);
+// }
 
 // *** OTHER ***
 

@@ -1,11 +1,23 @@
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^\.]+)$ views/$1.html [NC,L]
-RewriteRule ^([^\.]+)$ $1.php [NC,L]
+# RewriteEngine On
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteRule ^([^\.]+)$ views/$1.html [NC,L]
+# RewriteRule ^([^\.]+)$ $1.php [NC,L]
 
 # DISABLE CACHING
-<IfModule mod_headers.c>
-    Header set Cache-Control "no-cache, no-store, must-revalidate"
-    Header set Pragma "no-cache"
-    Header set Expires "0"
+# <IfModule mod_headers.c>
+#     Header set Cache-Control "no-cache, no-store, must-revalidate"
+#     Header set Pragma "no-cache"
+#     Header set Expires "0"
+# </IfModule>
+
+<IfModule mod_headers.c>    
+    <FilesMatch "\.(css)$">
+        Header set Cache-Control "ache-control: public, max-age=31536000, immutable"
+    </FilesMatch>
+    <FilesMatch "\.(js)$">
+        Header set Cache-Control "ache-control: public, max-age=31536000, immutable"
+    </FilesMatch>
+    <FilesMatch "index\.(html)$">
+        Header set Cache-Control "no-store"
+    </FilesMatch>
 </IfModule>
